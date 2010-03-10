@@ -8,6 +8,9 @@ Live chat software for live help, online sales and customer support. Plugin allo
 
 1. Upload `livechat.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Download LIVECHAT Contact Center from http://www.livechatinc.com/en/download/
+4. Create your new live chat licence and paste your license number in your plugin settings
+5. It works!
 
 == Changelog ==
 
