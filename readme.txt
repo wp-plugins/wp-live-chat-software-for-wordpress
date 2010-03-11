@@ -8,6 +8,7 @@ This plugin integrates your Wordpress with LIVECHAT Contact Center - an applicat
 == Description ==
 
 LIVECHAT Contact Center is a fast and intuitive live chat software to enable your sales representatives contact customers on the website. Help online visitors find what they need before they leave your site.
+
 * Increase sales conversion rate and customer satisfaction level.
 * Allow customers to chat live with the sales person.
 * Increase number of successful transactions.
