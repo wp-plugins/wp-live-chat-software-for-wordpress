@@ -1,4 +1,4 @@
-=== WP LIVECHAT Contact Center for WordPress ===
+=== Live Chat Software for Wordpress ===
 Contributors: LIVECHAT Software
 Tags: livechat, live, chat, live help, live support, help desk, plugin
 Stable tag: trunk
@@ -203,11 +203,14 @@ This add-on allows agents to use Skype account to call back the customers in the
 
 == Screenshots ==
 
-1. *Website integration*: Put the chat button and monitoring code to successfully integrate live chat with your website. Let your sales force get in touch with your customers and identify their needs.
-2. *Chat window*: A direct chat with an agent using the web communicator.
-3. *Agent window*
-4. *Website monitoring*: Track your visitors in real time and see what pages they are watching now. Invite them to chat in response to your marketing campaigns and initiatives.
-5. *Dashboard*: Be up-to-date with your company activity. Dashboard gives you many information presented in concise and pleasant way.
+1. Website integration: Put the chat button and monitoring code to successfully integrate live chat with your website. Let your sales force get in touch with your customers and identify their needs.
+2. Chat window: A direct chat with an agent using the web communicator.
+3. Agent window
+4. Website monitoring: Track your visitors in real time and see what pages they are watching now. Invite them to chat in response to your marketing campaigns and initiatives.
+5. Dashboard: Be up-to-date with your company activity. Dashboard gives you many information presented in concise and pleasant way.
+6. One of the chat buttons available in our buttons gallery
+7. One of the chat invitations available in our invitations gallery
+8. One of the personal invitations available in our invitations gallery
 
 == Changelog ==
 

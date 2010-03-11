@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: WP LIVECHAT Contact Center for WordPress
+Plugin Name: Live Chat Software for Wordpress
 Plugin URI: http://www.livechatinc.com
 Description: Description: Live chat software for live help, online sales and customer support. Plugin allows to quickly install the live chat button and monitoring code on any WordPress website.
 Author: LIVECHAT Software
