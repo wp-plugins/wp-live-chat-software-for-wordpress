@@ -112,8 +112,8 @@ LIVECHAT Contact Center works with:
 
 1. Upload `livechat.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Download LIVECHAT Contact Center from http://www.livechatinc.com/en/download/
-4. Create your new live chat licence and paste your license number in your plugin settings
+3. Sign up to create your new live chat account: https://www.livechatinc.com/en/signup/
+4. Put your license number in your plugin settings (you will find it in live chat Dashboard).
 5. It works!
 
 == Frequently Asked Questions ==
