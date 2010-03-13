@@ -110,11 +110,10 @@ LIVECHAT Contact Center works with:
 
 == Installation ==
 
-1. Upload `livechat.php` to the `/wp-content/plugins/` directory
+1. Upload `livechat.php` and `plugin_files` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Sign up to create your new live chat account: https://www.livechatinc.com/en/signup/
-4. Put your license number in your plugin settings (you will find it in live chat Dashboard).
-5. It works!
+3. Click the 'Live Chat' menu on the left.
+4. Follow the instructions.
 
 == Frequently Asked Questions ==
 
@@ -214,6 +213,12 @@ This add-on allows agents to use Skype account to call back the customers in the
 8. One of the personal invitations available in our invitations gallery
 
 == Changelog ==
+
+= 2.0.0 =
+* Rewritten whole plugin from scratch
+* Ability to create new license from Wordpress plugin settings
+* Updated monitoring code speed
+* Added notification messages
 
 = 1.0.0 =
 * First plugin version

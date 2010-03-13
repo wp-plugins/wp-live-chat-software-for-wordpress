@@ -2,83 +2,135 @@
 /*
 Plugin Name: Live Chat Software for Wordpress
 Plugin URI: http://www.livechatinc.com
-Description: Description: Live chat software for live help, online sales and customer support. Plugin allows to quickly install the live chat button and monitoring code on any WordPress website.
+Description: Live chat software for live help, online sales and customer support. This plugin allows to quickly install the live chat button and monitoring code on any WordPress website.
 Author: LIVECHAT Software
-Version: 1.0.0
+Version: 2.0.0
 Author URI: http://www.livechatinc.com
 */
 
-function sampleLIVECHAT($licenceNumber, $groups, $language) {
-?>
-<!-- BEGIN LIVECHAT button tag. See also www.livechatinc.com -->
-<div style="text-align:center"><a id="LivechatButton" href="http://chat.livechatinc.net/licence/<?php echo $licenceNumber?>/open_chat.cgi?groups=<?php echo $groups?>&amp;lang=<?php echo $language?>" target="chat_<?php echo $licenceNumber?>" onclick="window.open('http://chat.livechatinc.net/licence/<?php echo $licenceNumber?>/open_chat.cgi?groups=<?php echo $groups?>'+'&amp;lang=<?php echo $language?>&amp;dc='+escape(document.cookie+';l='+document.location+';r='+document.referer+';s='+typeof lc_session),'Czat_<?php echo $licenceNumber?>','width=529,height=520,resizable=yes,scrollbars=no,status=1');return false;"></a><script type='text/javascript'>var img=new Image();img.style.border='0';img.src=(("https:" == document.location.protocol) ? "https://" : "http://")+'chat.livechatinc.net/licence/<?php echo $licenceNumber?>/button.cgi?lang=<?php echo $language?>&groups=<?php echo $groups?>'+'&d='+((new Date()).getTime());var _livechat_button=document.getElementById('LivechatButton');if(_livechat_button!=null){_livechat_button.appendChild(img);}</script><br><span style="font-family:Tahoma,sans-serif;font-size:10px;color:#333"><a href="http://www.livechatinc.com" style="font-size:10px;text-decoration:none" target="_blank">Live Chat</a> <span style="color: #475780">Software for Business</span></span></div>
-<!-- END LIVECHAT button tag. See also www.livechatinc.com -->
-<!-- BEGIN LIVECHAT track tag. See also www.livechatinc.com -->
-<script type="text/javascript">
-var livechat_params = '';
-var livechat_host = (("https:" == document.location.protocol) ? "https://" : "http://");
-livechat_params = ((livechat_params == '') ? '' : '&amp;params='+encodeURIComponent(livechat_params));
-document.write(unescape("%3Cscript src='") + livechat_host + "chat.livechatinc.net/licence/<?php echo $licenceNumber?>/script.cgi?lang=<?php echo $language?>&amp;groups=<?php echo $groups?>" + livechat_params + unescape("' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<!-- END LIVECHAT track tag. See also www.livechatinc.com -->
-<?php
+
+//
+// Admin panel
+//
+
+/**
+ * Loads CSS styles for admin panel styling
+ */
+
+define ('LIVECHAT_PLUGIN_URL', WP_PLUGIN_URL . str_replace('\\', '/', strrchr(dirname(__FILE__), DIRECTORY_SEPARATOR)) . '/plugin_files');
+
+function livechat_admin_head()
+{
+	echo '<style type="text/css">';
+	echo '@import url('.LIVECHAT_PLUGIN_URL.'/css/styles.css);';
+	echo '</style>';
 }
 
-function widget_myLIVECHAT($args) {
-    extract($args);
-
-    $options = get_option("widget_myLIVECHAT");
-    if (!is_array( $options )) {
-	$options = array(
-	    'licence_number' => '',
-	    'language' => 'en',
-	    'groups' => 0
-	); 
-    }      
-    //Our Widget Content
-    sampleLIVECHAT($options['licence_number'], $options['groups'], $options['language']);
+/**
+ * Loads jQuery scripts in admin panel
+ */
+function livechat_admin_footer()
+{
+	echo '<script type="text/javascript" src="'.LIVECHAT_PLUGIN_URL.'/js/scripts.js"></script>';
+	echo '<script type="text/javascript" src="'.LIVECHAT_PLUGIN_URL.'/js/signup.js"></script>';
 }
 
-function myLIVECHAT_control()  {
-    $options = get_option("widget_myLIVECHAT");
-    if (!is_array( $options )) {
-	$options = array(
-	    'licence_number' => '',
-	    'language' => 'en',
-	    'groups' => 0
-	); 
-    }    
+/**
+ * Registers livechat settings variables
+ */
+function livechat_sanitize_license_number ($license_number)
+{
+	if (preg_match('/^\d{2,}$/', $license_number)) return $license_number;
 
-    if ($options['groups'] == '')  { $options['groups'] = "0"; }
-    if ($options['language'] == '') { $options['language'] = "en"; }
-    if ($_POST['myLIVECHAT-Submit']) {
-	$options['licence_number'] = htmlspecialchars($_POST['myLIVECHAT-licence_number']);
-	$options['language'] = htmlspecialchars($_POST['myLIVECHAT-language']);
-	$options['groups'] = htmlspecialchars($_POST['myLIVECHAT-groups']);
-	update_option("widget_myLIVECHAT", $options);
-    }
-
-?>
-    <p>
-    <label for="myLIVECHAT-licence_number">Enter your licence number: </label><br />
-    <input type="text" id="myLIVECHAT-licence_number" name="myLIVECHAT-licence_number" value="<?php echo $options['licence_number'];?>" />
-    </p>
-    <p>
-    <label for="myLIVECHAT-language">Button language (default is EN): </label><br />
-    <input type="text" id="myLIVECHAT-language" name="myLIVECHAT-language" value="<?php echo $options['language'];?>" />
-    </p>
-    <p>
-    <label for="myLIVECHAT-groups">Groups (default is 0): </label><br />
-    <input type="text" id="myLIVECHAT-groups" name="myLIVECHAT-groups" value="<?php echo $options['groups'];?>" />
-    </p>
-    <input type="hidden" id="myLIVECHAT-Submit" name="myLIVECHAT-Submit" value="1" />
-  </p>
-<?php
+	return '';;
 }
 
-function myLIVECHAT_init() {
-    wp_register_sidebar_widget( 'WIDGETID', 'LIVECHAT Contact Center', 'widget_myLIVECHAT', array('description' => __('Live chat software for live help, online sales and customer support. Plugin allows to quickly install the live chat button and monitoring code on any WordPress website.')) );
-    wp_register_widget_control( 'WIDGETID', 'LIVECHAT Contact Center', 'myLIVECHAT_control');
+function livechat_sanitize_lang ($lang)
+{
+	if (preg_match('/^[a-z]{2}$/', $lang)) return $lang;
+
+	return 'en';
 }
-add_action("plugins_loaded", "myLIVECHAT_init");
-?>
+
+function livechat_admin_register_settings()
+{
+	register_setting ('livechat_license_information', 'livechat_license_number', 'livechat_sanitize_license_number');
+	register_setting ('livechat_license_information', 'livechat_lang', 'livechat_sanitize_lang');
+	register_setting ('livechat_license_information', 'livechat_groups');
+	register_setting ('livechat_license_information', 'livechat_params');
+	register_setting ('livechat_license_information', 'livechat_license_created_flag');
+}
+
+function livechat_read_options()
+{
+	$license_number = get_option('livechat_license_number');
+
+	$lang = get_option('livechat_lang');
+	if (empty ($lang)) $lang = 'en';
+
+	$groups = get_option('livechat_groups');
+	if (empty ($groups)) $groups = '0';
+
+	$params = get_option('livechat_params');
+
+	return array ($license_number, $lang, $groups, $params);
+}
+
+/**
+ * Creates new admin menu
+ */
+function livechat_admin_menu()
+{
+	require_once (dirname(__FILE__).'/plugin_files/settings.php');
+
+	add_menu_page ('Live chat settings', 'Live chat', 'administrator', '_livechat_settings', '_livechat_settings' /* live chat logo here */);
+	add_submenu_page ('_livechat_settings', 'Live chat settings', 'Settings', 'administrator', '_livechat_settings', '_livechat_settings');
+}
+
+add_action ('admin_head', 'livechat_admin_head');
+add_action ('admin_footer', 'livechat_admin_footer');
+add_action ('admin_menu', 'livechat_admin_menu');
+add_action ('admin_init', 'livechat_admin_register_settings');
+
+
+
+//
+// Monitoring code installation
+//
+
+function livechat_monitoring_code()
+{
+	require_once (dirname(__FILE__).'/plugin_files/monitoring_code.php');
+
+	list ($license_number, $lang, $groups, $params) = livechat_read_options();
+
+	_livechat_monitoring_code ($license_number, $lang, $groups, $params);
+}
+
+add_action ('get_footer', 'livechat_monitoring_code');
+
+
+//
+// Chat button code installation
+//
+
+function livechat_chat_button_code()
+{
+	require_once (dirname(__FILE__).'/plugin_files/chat_button_code.php');
+
+	list ($license_number, $lang, $groups, $params) = livechat_read_options();
+
+	_livechat_chat_button_code ($license_number, $lang, $groups);
+}
+
+function livechat_chat_button_code_control()
+{
+	require_once (dirname(__FILE__).'/plugin_files/chat_button_code.php');
+
+	list ($license_number, $lang, $groups, $params) = livechat_read_options();
+
+	_livechat_chat_button_code_control ($license_number, $lang, $groups);
+}
+
+wp_register_sidebar_widget ('livechat_widget', 'Live chat for Wordpress', 'livechat_chat_button_code');
+wp_register_widget_control ('livechat_widget', 'Live chat for Wordpress', 'livechat_chat_button_code_control');
