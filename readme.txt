@@ -110,7 +110,7 @@ LIVECHAT Contact Center works with:
 
 == Installation ==
 
-1. Upload `livechat.php` and `plugin_files` to the `/wp-content/plugins/` directory
+1. Upload `wp-live-chat-software-for-wordpress` directory to Wordpress plugins directory (`/wp-content/plugins/`)
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Click the 'Live Chat' menu on the left.
 4. Follow the instructions.
