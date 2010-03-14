@@ -2,12 +2,12 @@
 
 function _livechat_helper_license_created_info()
 {
-	echo '<div class="updated installed_ok"><p><strong>Your live chat license has been created! Please follow the instructions we\'ve sent you on your e-mail address to install live chat agent application.</strong></p></div>';
+	echo '<div class="updated installed_ok"><p><strong>Your live chat license has been created! Please install the <a href="http://www.livechatinc.com/download/contact_center/LIVECHAT_Contact_Center.exe">live chat application</a> and start chatting!</strong></p></div>';
 }
 
 function _livechat_helper_monitoring_code_info()
 {
-	if (strlen(get_option('livechat_license_number') > 0))
+	if (LIVECHAT_LICENSE_INSTALLED)
 	{
 		echo '<div class="updated installed_ok"><p><strong>Your live chat monitoring code is installed properly. <a class="help" href="http://www.livechatinc.com/en/support/manual/monitoring_code.htm">(what is a monitoring code?)</a> </strong></p></div>';
 	}
@@ -15,7 +15,7 @@ function _livechat_helper_monitoring_code_info()
 
 function _livechat_helper_chat_button_info()
 {
-	if (strlen(get_option('livechat_license_number') > 0))
+	if (LIVECHAT_LICENSE_INSTALLED)
 	{
 		if (is_active_widget (null, 'livechat_widget', true))
 		{
@@ -23,7 +23,15 @@ function _livechat_helper_chat_button_info()
 		}
 		else
 		{
-			echo '<div class="updated info"><p><strong>To install your live chat button, go to <a href="widgets.php">Widgets</a> page. <a class="help" href="http://www.livechatinc.com/en/support/manual/chat_button.htm" target="_blank">(what is a chat button?)</a> </strong></p></div>';
+			// Check if theme supports Widgets
+			if (LIVECHAT_WIDGETS_ENABLED)
+			{
+				echo '<div class="updated info"><p><strong>To install your live chat button, go to <a href="widgets.php">Widgets</a> page. <a class="help" href="http://www.livechatinc.com/en/support/manual/chat_button.htm" target="_blank">(what is a chat button?)</a> </strong></p></div>';
+			}
+			else
+			{
+				echo '<div class="updated info"><p><strong>To install your live chat button, <a href="?page=livechat_chat_button">click here</a>. <a class="help" href="http://www.livechatinc.com/en/support/manual/chat_button.htm" target="_blank">(what is a chat button?)</a> </strong></p></div>';
+			}
 		}
 	}
 }
@@ -72,24 +80,30 @@ else
 
 <!-- Already have an account -->
 <div class="metabox-holder" id="livechat_already_have" style="display:none">
+
+	<?php if (LIVECHAT_LICENSE_INSTALLED): ?>
+	<div class="postbox">
+	<h3>Download application</h3>
+	<div class="postbox_content">
+	<p>Download the live chat application and start chatting with your customers!</p>
+	<p><a href="http://www.livechatinc.com/download/contact_center/LIVECHAT_Contact_Center.exe" class="awesome blue">Download application</a></p>
+	</div>
+	</div>
+	<?php endif; ?>
+
 	<div class="postbox">
 	<form method="post" action="options.php">
 	<?php settings_fields('livechat_license_information'); ?>
 
-		<h3>Enter your live chat account information</h3>
+		<h3>Live chat account</h3>
 		<div class="postbox_content">
 		<table class="form-table">
 		<tr>
 		<th scope="row"><label for="livechat_license_number">My license number is:</label></th>
-		<td><input type="text" name="livechat_license_number" id="livechat_license_number" value="<?php echo get_option('livechat_license_number'); ?>" /> <span class="explanation">You will find your license number in the <a href="https://panel.livechatinc.net/" target="_blank">Control Panel</a>.</span></td>
+		<td><input type="text" name="livechat_license_number" id="livechat_license_number" value="<?php echo get_option('livechat_license_number'); ?>" /><?php if (LIVECHAT_LICENSE_INSTALLED == false): ?> <span class="explanation">You will find your license number in the <a href="?page=livechat_control_panel">Control Panel</a>.</span><?php endif; ?></td>
 		</tr>
-		</table>
-		</div>
 
-		<?php if (strlen(get_option('livechat_license_number')) > 1): ?>
-		<h3 class="no-radius">Advanced settings</h3>
-		<div class="postbox_content">
-		<table class="form-table">
+		<?php if (LIVECHAT_LICENSE_INSTALLED): ?>
 		<?php
 		$lang = get_option('livechat_lang');
 		if (empty($lang)) $lang = 'en';
@@ -115,10 +129,9 @@ else
 		<th scope="row"><label for="livechat_params">Params:</label></th>
 		<td><input type="text" name="livechat_params" id="livechat_params" value="<?php echo $params; ?>" /> <a class="help" href="http://www.livechatinc.com/en/support/documentation/customizing_web_agent_.htm" target="_blank">advanced help</a></td>
 		</tr>
-		</table>
 		<?php else: ?>
-		<div class="postbox_content">
 		<?php endif; ?>
+		</table>
 
 		<p class="submit">
 		<input type="hidden" name="livechat_license_created_flag" value="0" id="livechat_license_created_flag">

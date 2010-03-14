@@ -214,6 +214,12 @@ This add-on allows agents to use Skype account to call back the customers in the
 
 == Changelog ==
 
+= 2.1.0 =
+* Added "Settings" link to plugin settings page
+* Added "Download application" button
+* Added Control Panel
+* Added Chat button installation help for themes with no widgets support
+
 = 2.0.0 =
 * Rewritten whole plugin from scratch
 * Ability to create new license from Wordpress plugin settings
