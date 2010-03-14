@@ -31,6 +31,8 @@ LIVECHAT Contact Center works with:
 * Český
 * Deutsch
 * English
+* Espańol
+* Français
 * Italiano
 * Polski
 * Română
@@ -213,6 +215,9 @@ This add-on allows agents to use Skype account to call back the customers in the
 8. One of the personal invitations available in our invitations gallery
 
 == Changelog ==
+
+= 2.1.1 =
+* Fixed monitoring and chat button code installation
 
 = 2.1.0 =
 * Added "Settings" link to plugin settings page

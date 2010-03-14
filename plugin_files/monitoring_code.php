@@ -2,6 +2,7 @@
 
 function _livechat_monitoring_code($license_number, $lang, $groups, $params)
 {
+	if (LIVECHAT_LICENSE_INSTALLED == false) return;
 ?>
 
 <!-- BEGIN LIVECHAT track tag. See also www.livechatinc.com -->

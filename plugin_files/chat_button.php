@@ -3,6 +3,7 @@
 // Chat button Widget
 function _livechat_chat_button_widget ($license_number, $lang, $groups, $use_ssl = false)
 {
+	if (LIVECHAT_LICENSE_INSTALLED == false) return;
 ?>
 
 <!-- BEGIN LIVECHAT button tag. See also www.livechatinc.com -->
