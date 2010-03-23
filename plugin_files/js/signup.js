@@ -34,9 +34,12 @@ $(document).ready(function()
 				$('#ajax_message').removeClass('message').addClass('wait').html('Creating new licence&hellip;');
 
 				var url = 'http://www.livechatinc.com/en/signup/';
-				url += '?account_first_name='+$('#livechat_account_first_name').val();
-				url += '&account_last_name='+$('#livechat_account_last_name').val();
-				url += '&account_email='+$('#livechat_account_email').val();
+				url += '?account_first_name='+encodeURIComponent($('#livechat_account_first_name').val());
+				url += '&account_last_name='+encodeURIComponent($('#livechat_account_last_name').val());
+				url += '&account_email='+encodeURIComponent($('#livechat_account_email').val());
+				url += '&account_company='+encodeURIComponent($('#livechat_account_company').val());
+				url += '&account_phone='+encodeURIComponent($('#livechat_account_phone').val());
+				url += '&account_website='+encodeURIComponent($('#livechat_account_website').val());
 				url += '&action=wordpress_signup';
 				url += '&recaptcha_ip='+$('input[name=recaptcha_ip]').val();
 				url += '&recaptcha_challenge_field='+$('input[name=recaptcha_challenge_field]').val();

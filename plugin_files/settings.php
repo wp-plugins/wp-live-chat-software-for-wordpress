@@ -151,22 +151,34 @@ else
 		<div class="postbox_content">
 
 		<?php settings_fields('livechat_license_created'); ?>
+		<p>Fields marked with <span class="asterisk">*</span> are required.</p>
 		<table class="form-table">
 		<tr>
-		<th scope="row"><label for="livechat_account_first_name">First name:</label></th>
+		<th scope="row"><label for="livechat_account_first_name"><span class="asterisk">*</span>First name:</label></th>
 		<td><input type="text" name="livechat_account_first_name" id="livechat_account_first_name" maxlength="30" /></td>
 		</tr>
 		<tr>
-		<th scope="row"><label for="livechat_account_last_name">Last name:</label></th>
+		<th scope="row"><label for="livechat_account_last_name"><span class="asterisk">*</span>Last name:</label></th>
 		<td><input type="text" name="livechat_account_last_name" id="livechat_account_last_name" maxlength="30" /></td>
 		</tr>
 		<tr>
-		<th scope="row"><label for="livechat_account_email">E-mail:</label></th>
+		<th scope="row"><label for="livechat_account_email"><span class="asterisk">*</span>E-mail:</label></th>
 		<td><input type="text" name="livechat_account_email" id="livechat_account_email" maxlength="70" /></td>
 		</tr>
-
 		<tr>
-		<th scope="row"><label>Confirmation code:</label></th>
+		<th scope="row"><label for="livechat_account_company">Company name:</label></th>
+		<td><input type="text" name="livechat_account_company" id="livechat_account_company" maxlength="70" /></td>
+		</tr>
+		<tr>
+		<th scope="row"><label for="livechat_account_phone">Phone number:</label></th>
+		<td><input type="text" name="livechat_account_phone" id="livechat_account_phone" maxlength="70" /></td>
+		</tr>
+		<tr>
+		<th scope="row"><label for="livechat_account_website">Website:</label></th>
+		<td><input type="text" name="livechat_account_website" id="livechat_account_website" maxlength="70" value="<?php echo bloginfo('url'); ?>" /></td>
+		</tr>
+		<tr>
+		<th scope="row"><label><span class="asterisk">*</span>Confirmation code:</label></th>
 		<td>
 		<!-- ReCaptcha -->
 		<input type="hidden" name="recaptcha_ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
