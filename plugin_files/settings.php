@@ -195,6 +195,7 @@ else
 		<table class="form-table">
 		<tr>
 		<td class="submit">
+			<input type="hidden" name="livechat_account_timezone" value="US/Pacific" id="livechat_account_timezone">
 			<input type="submit" value="Create account" id="submit" class="button-primary">
 		</td>
 		</tr>

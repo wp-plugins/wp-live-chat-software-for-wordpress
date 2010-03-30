@@ -216,6 +216,9 @@ This add-on allows agents to use Skype account to call back the customers in the
 
 == Changelog ==
 
+= 2.1.3 =
+* Added timezone detection when creating new license
+
 = 2.1.2 =
 * Added "Company", "Phone" and "Website" fields in license registration form
 * Fixed license registration bug
