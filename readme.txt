@@ -2,6 +2,7 @@
 Contributors: LIVECHAT Software
 Tags: live support, live chat, live chat software, online support, customer help, customer support, livechat, help desk, helpdesk, live support, customer service, plugin, chat
 Stable tag: trunk
+Tested up to: 2.8
 
 This plugin integrates your Wordpress with LIVECHAT Contact Center - an application for online customer service and support.
 
@@ -215,6 +216,9 @@ This add-on allows agents to use Skype account to call back the customers in the
 8. One of the personal invitations available in our invitations gallery
 
 == Changelog ==
+
+= 2.1.4 =
+* Fixed readme.txt file causing the `The plugin does not have a valid header.` problem
 
 = 2.1.3 =
 * Added timezone detection when creating new license
