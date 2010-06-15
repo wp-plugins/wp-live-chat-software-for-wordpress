@@ -31,12 +31,12 @@ LIVECHAT Contact Center works with:
 * Chinese
 * Český
 * Deutsch
+* Ελληνικά
 * English
 * Espańol
 * Français
 * Italiano
 * Polski
-* Română
 * Русский Язык
 * Svenska
 * Slovenský
@@ -98,7 +98,7 @@ LIVECHAT Contact Center works with:
 * Play with custom color themes generator
 * Browse Chat Buttons, Standard Invitations and Personal Invitations galleries
 * Upload custom Chat Buttons, Standard Invitations and Personal Invitations graphics
-* Easily customize your Pre-chat and Post-chat Surveys
+* Easily customize your Pre-chat Surveys, Post-chat Surveys and Offline Message forms
 * Share common Canned Responses, URL Addresses and Aliases with other agents
 * Integrate your Live Chat software with CRM system
 * Install new features with Add-ons Manager
