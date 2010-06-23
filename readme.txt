@@ -217,6 +217,9 @@ This add-on allows agents to use Skype account to call back the customers in the
 
 == Changelog ==
 
+= 2.1.6 =
+* Added LiveChat icon in menu bar
+
 = 2.1.5 =
 * Fixed creating new licences
 * Rebranded LIVECHAT Contact Center to LiveChat
