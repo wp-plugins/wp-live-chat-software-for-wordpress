@@ -105,7 +105,7 @@ function livechat_admin_menu()
 	define('LIVECHAT_WIDGETS_ENABLED', (bool)(sizeof($wp_registered_sidebars) > 0));
 
 
-	add_menu_page ('Live chat settings', 'Live chat', 'administrator', 'livechat_settings', 'livechat_settings' /* live chat logo here */);
+	add_menu_page ('Live chat settings', 'Live chat', 'administrator', 'livechat_settings', 'livechat_settings', LIVECHAT_PLUGIN_URL.'/images/favicon.png');
 	add_submenu_page ('livechat_settings', 'Live chat settings', 'Settings', 'administrator', 'livechat_settings', 'livechat_settings');
 	if (LIVECHAT_LICENSE_INSTALLED && LIVECHAT_WIDGETS_ENABLED == false) add_submenu_page ('livechat_settings', 'Chat button', 'Chat button', 'administrator', 'livechat_chat_button', 'livechat_chat_button');
 	add_submenu_page ('livechat_settings', 'Control Panel', 'Control Panel', 'administrator', 'livechat_control_panel', 'livechat_control_panel');
