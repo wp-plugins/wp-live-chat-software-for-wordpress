@@ -22,7 +22,7 @@ function _livechat_chat_button_widget_control ($license_number, $lang, $groups, 
 <hr class="livechat">
 <p>License number: <strong><?php echo $license_number; ?></strong><br>
 Language: <strong><?php echo $lang; ?></strong><br>
-Groups: <strong><?php echo $groups; ?></strong></p>
+Skill: <strong><?php echo $groups; ?></strong></p>
 <hr class="livechat">
 <p>To change these settings, go to <a href="?page=livechat_settings">Live chat plugin settings page</a>.</p>
 <?php else: ?>

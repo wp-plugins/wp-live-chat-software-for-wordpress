@@ -193,14 +193,13 @@ $(document).ready(function()
 
 			// Check if email address is available
 			$.getJSON('http://www.livechatinc.com/php/licence_info.php?email='+$('#livechat_new_account form input[name=livechat_account_email]').val()+'&jsoncallback=?',
-			function(data)
+			function(response)
 			{
-				data = parseInt(data.response);
-				if (data == 1)
+				if (response.response == 'true')
 				{
 					create_licence();
 				}
-				else if (data == 2)
+				else if (response.response == 'false')
 				{
 					$('#ajax_message').removeClass('wait').addClass('message').html('This email address is already in use. Please choose another e-mail address.');
 				}

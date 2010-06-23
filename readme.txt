@@ -4,11 +4,11 @@ Tags: live support, live chat, live chat software, online support, customer help
 Stable tag: trunk
 Tested up to: 2.8
 
-This plugin integrates your Wordpress with LIVECHAT Contact Center - an application for online customer service and support.
+This plugin integrates your Wordpress with LiveChat - an application for online customer service and support.
 
 == Description ==
 
-LIVECHAT Contact Center is a fast and intuitive live chat software to enable your sales representatives contact customers on the website. Help online visitors find what they need before they leave your site.
+LiveChat is a fast and intuitive live chat software to enable your sales representatives contact customers on the website. Help online visitors find what they need before they leave your site.
 
 * Increase sales conversion rate and customer satisfaction level.
 * Allow customers to chat live with the sales person.
@@ -26,7 +26,7 @@ Generate reports for each agent with the number of chats, invitations or time sp
 
 = Multiple languages support =
 
-LIVECHAT Contact Center works with:
+LiveChat works with:
 
 * Chinese
 * Český
@@ -216,6 +216,12 @@ This add-on allows agents to use Skype account to call back the customers in the
 8. One of the personal invitations available in our invitations gallery
 
 == Changelog ==
+
+= 2.1.5 =
+* Fixed creating new licences
+* Rebranded LIVECHAT Contact Center to LiveChat
+* Updated application download link
+* Renamed "Groups" to "Skills"
 
 = 2.1.4 =
 * Fixed readme.txt file causing the `The plugin does not have a valid header.` problem
