@@ -119,7 +119,7 @@ else
 		?>
 		<tr>
 		<th scope="row"><label for="livechat_groups">Skill:</label></th>
-		<td><input type="text" name="livechat_groups" id="livechat_groups" value="<?php echo $groups; ?>" /> <a class="help" href="http://www.livechatinc.com/en/support/manual/establishing_groups_of_operators.htm" target="3">what is that?</a> <span class="explanation"><strong>0</strong> for default skill (recommended)</span></td>
+		<td><input type="text" name="livechat_groups" id="livechat_groups" value="<?php echo $groups; ?>" /> <a class="help" href="http://www.livechatinc.com/en/resources/tutorials/skills_based_routing/" target="_blank">what is that?</a> <span class="explanation"><strong>0</strong> for default skill (recommended)</span></td>
 		</tr>
 
 		<?php

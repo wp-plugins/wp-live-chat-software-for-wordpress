@@ -5,7 +5,7 @@ Plugin URI: http://www.livechatinc.com
 Description: Live chat software for live help, online sales and customer support. This plugin allows to quickly install the live chat button and monitoring code on any WordPress website.
 Author: LIVECHAT Software
 Author URI: http://www.livechatinc.com
-Version: 2.1.6
+Version: 2.1.7
 */
 
 
@@ -59,7 +59,7 @@ function livechat_sanitize_lang ($lang)
 function livechat_sanitize_groups ($groups)
 {
 	$groups = trim($groups);
-	if (preg_match('/^(\d+)(,\d+)+$/', $groups)) return $groups;
+	if (preg_match('/^(\d+)$/', $groups)) return $groups;
 
 	return '0';
 }
@@ -155,7 +155,7 @@ function livechat_monitoring_code()
 	_livechat_monitoring_code ($license_number, $lang, $groups, $params);
 }
 
-add_action ('get_footer', 'livechat_monitoring_code');
+add_action ('wp_head', 'livechat_monitoring_code');
 
 
 //

@@ -2,7 +2,7 @@
 Contributors: LIVECHAT Software
 Tags: live support, live chat, live chat software, online support, customer help, customer support, livechat, help desk, helpdesk, live support, customer service, plugin, chat
 Stable tag: trunk
-Tested up to: 2.8
+Tested up to: 3.0
 
 This plugin integrates your Wordpress with LiveChat - an application for online customer service and support.
 
@@ -216,6 +216,11 @@ This add-on allows agents to use Skype account to call back the customers in the
 8. One of the personal invitations available in our invitations gallery
 
 == Changelog ==
+
+= 2.1.7 =
+* Fixed `Skill` parameter
+* Updated monitoring and chat button codes (for improved performance)
+* Updated skills tutorial link
 
 = 2.1.6 =
 * Added LiveChat icon in menu bar
