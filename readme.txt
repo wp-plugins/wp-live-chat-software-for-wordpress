@@ -4,7 +4,7 @@ Tags: live support, live chat, live chat software, online support, customer help
 Stable tag: trunk
 Tested up to: 3.0
 
-This plugin integrates your Wordpress with LiveChat - an application for online customer service and support.
+This plugin integrates your Wordpress with LiveChat - an application for online customer service and support. For LiveChat pricing, visit the online store: http://www.livechatinc.com/en/store/
 
 == Description ==
 
