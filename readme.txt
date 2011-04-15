@@ -219,6 +219,9 @@ This add-on allows agents to use Skype account to call back the customers in the
 
 == Changelog ==
 
+= 2.1.8 =
+* Updated desktop application download link
+
 = 2.1.7 =
 * Fixed `Skill` parameter
 * Updated monitoring and chat button codes (for improved performance)
