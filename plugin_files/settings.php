@@ -2,7 +2,7 @@
 
 function _livechat_helper_license_created_info()
 {
-	echo '<div class="updated installed_ok"><p><strong>Your live chat license has been created! Please install the <a href="http://www.livechatinc.com/download/LiveChat/LiveChat.exe">live chat application</a> and start chatting!</strong></p></div>';
+	echo '<div class="updated installed_ok"><p><strong>Your live chat license has been created! Please install the <a href="http://www.livechatinc.com/en/download/" target="_blank">live chat application</a> and start chatting!</strong></p></div>';
 }
 
 function _livechat_helper_monitoring_code_info()
@@ -86,7 +86,7 @@ else
 	<h3>Download application</h3>
 	<div class="postbox_content">
 	<p>Download the live chat application and start chatting with your customers!</p>
-	<p><a href="http://www.livechatinc.com/download/LiveChat/LiveChat.exe" class="awesome blue">Download application</a></p>
+	<p><a href="http://www.livechatinc.com/en/download/" target="_blank" class="awesome blue">Download application</a></p>
 	</div>
 	</div>
 	<?php endif; ?>
