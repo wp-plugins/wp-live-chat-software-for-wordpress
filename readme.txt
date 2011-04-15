@@ -2,7 +2,7 @@
 Contributors: LIVECHAT Software
 Tags: live support, live chat, live chat software, online support, customer help, customer support, livechat, help desk, helpdesk, live support, customer service, plugin, chat
 Stable tag: trunk
-Tested up to: 3.0
+Tested up to: 3.1
 
 This plugin integrates your Wordpress with LiveChat - an application for online customer service and support.
 
