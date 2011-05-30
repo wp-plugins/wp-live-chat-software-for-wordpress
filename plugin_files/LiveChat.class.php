@@ -54,7 +54,7 @@ class LiveChat
 	{
 		if (is_null($this->plugin_url))
 		{
-			$this->plugin_url = WP_PLUGIN_URL.'/livechat/plugin_files';
+			$this->plugin_url = WP_PLUGIN_URL.'/wp-live-chat-software-for-wordpress/plugin_files';
 		}
 
 		return $this->plugin_url;
