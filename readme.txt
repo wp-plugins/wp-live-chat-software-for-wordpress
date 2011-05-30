@@ -17,7 +17,7 @@ Take a tour to see why you need LiveChat on your website: http://www.livechatinc
 
 == Installation ==
 
-1. Upload `livechat` directory to Wordpress plugins directory (`/wp-content/plugins/`)
+1. Upload `wp-live-chat-software-for-wordpress` directory to Wordpress plugins directory (`/wp-content/plugins/`)
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Click the 'LiveChat' menu on the left.
 4. Follow the instructions.
