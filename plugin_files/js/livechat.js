@@ -150,7 +150,7 @@ var LiveChat =
 
 		$('#livechat_new_account .ajax_message').removeClass('message').addClass('wait').html('Creating new account&hellip;');
 
-		url = 'http://www.livechatinc.com/signup/';
+		url = 'https://www.livechatinc.com/signup/';
 		url += '?name='+encodeURIComponent($('#name').val());
 		url += '&email='+encodeURIComponent($('#email').val());
 		url += '&password='+encodeURIComponent($('#password').val());
