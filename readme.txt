@@ -24,7 +24,7 @@ Take a tour to see why you need LiveChat on your website: http://www.livechatinc
 
 == Screenshots ==
 
-1. Chat window: A direct chat with a LiveChat operator.
+1. Chat window: A chat with a LiveChat operator.
 
 == Changelog ==
 
