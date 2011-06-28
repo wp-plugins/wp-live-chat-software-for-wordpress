@@ -13,21 +13,26 @@ class TrackingCodeHelper extends LiveChatHelper
 			$license_number = LiveChat::get_instance()->get_license_number();
 
 			return <<<HTML
-		<script type="text/javascript">
+<script type="text/javascript">
+	(function() {
+		var license = '{$license_number}',
+				params = '',
+				lang = '{$lang}',
+				skill = '{$skill}';
 
-		  (function() {
-		    var lc_params = '';
-		    var lc_lang = '{$lang}';
-		    var lc_skill = '{$skill}';
-
-		    var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
-		    var lc_src = ('https:' == document.location.protocol ? 'https://' : 'http://');
-		        lc_src += 'chat.livechatinc.net/licence/{$license_number}/script.cgi?lang='+lc_lang+unescape('%26')+'groups='+lc_skill;
-		        lc_src += ((lc_params == '') ? '' : unescape('%26')+'params='+encodeURIComponent(encodeURIComponent(lc_params))); lc.src = lc_src;
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
-		  })();
-
-		</script>
+		__lc_load = function (p) { if (typeof __lc_loaded != 'function')
+			if (p) { var d = document, l = d.createElement('script'), s =
+ d.getElementsByTagName('script')[0], a = unescape('%26'),
+				h = ('https:' == d.location.protocol ? 'https://' : 'http://'); l.type = 'text/javascript'; l.async = true;
+				l.src = h + 'gis' + p +'.livechatinc.com/gis.cgi?serverType=control'+a+'licenseID='+license+a+'jsonp=__lc_load';
+				if (typeof p['server'] == 'string' && typeof __lc_serv != 'string') {
+					l.src = h + (__lc_serv = p['server']) + '/licence/'+license+'/script.cgi?lang='+lang+a+'groups='+skill;
+					l.src += (params == '') ? '' : a+'params='+encodeURIComponent(encodeURIComponent(params)); s.parentNode.insertBefore(l, s);
+				} else setTimeout(__lc_load, 1000); typeof __lc_serv != 'string' && s.parentNode.insertBefore(l, s);
+			} else __lc_load(Math.ceil(Math.random()*5)); }
+		__lc_load();
+	})();
+</script>
 HTML;
 		}
 
