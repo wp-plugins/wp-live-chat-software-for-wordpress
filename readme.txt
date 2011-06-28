@@ -28,6 +28,9 @@ Take a tour to see why you need LiveChat on your website: http://www.livechatinc
 
 == Changelog ==
 
+= 3.1.0 =
+* Major update in the Tracking Code
+
 = 3.0.0 =
 * Rewritten whole plugin code
 * Fixed creating licenses
