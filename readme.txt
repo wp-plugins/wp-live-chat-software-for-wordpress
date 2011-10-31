@@ -5,7 +5,7 @@ Stable tag: 3.1.0
 Requires at least: 2.8
 Tested up to: 3.1.3
 
-This plugin integrates your Wordpress with LiveChat - an application for online customer service and support.
+Live chat software for Wordpress plugin that integrate with LiveChat - an application for online customer service and support.
 
 == Description ==
 
