@@ -11,7 +11,7 @@ Live chat software for Wordpress plugin that integrate with LiveChat - an applic
 
 LiveChat is a fast and intuitive live chat software to enable your sales representatives contact customers on the website. Help online visitors find what they need before they leave your site.
 
-Try LiveChat free for 14 days! Sign up here: https://www.livechatinc.com/signup/
+Try LiveChat free for 30 days! Sign up here: https://www.livechatinc.com/signup/
 
 Take a tour to see why you need LiveChat on your website: http://www.livechatinc.com/tour/
 
