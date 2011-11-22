@@ -12,6 +12,7 @@ var LiveChat =
 		this.newLicenseForm();
 		this.controlPanelIframe();
 		this.fadeChangesSaved();
+		this.showAdvancedSettings();
 	},
 
 	externalLinks: function()
@@ -253,6 +254,25 @@ var LiveChat =
 				$cs.slideUp();
 			}, 1000);
 		}
+	},
+
+	showAdvancedSettings: function()
+	{
+		$('#advanced-link a').click(function()
+		{
+			if ($('#advanced').is(':visible'))
+			{
+				$(this).html('Show advanced settings&hellip;');
+				$('#advanced').slideUp();
+			}
+			else
+			{
+				$(this).html('Hide advanced settings&hellip;');
+				$('#advanced').slideDown();
+			}
+
+			return false;
+		})
 	}
 };
 

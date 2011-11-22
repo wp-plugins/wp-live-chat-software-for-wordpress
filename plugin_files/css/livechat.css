@@ -58,7 +58,6 @@ hr.livechat { margin-bottom: 1em; height: 1px; border: 0; color: #999; backgroun
 .ajax_message.message { background-image: none; text-indent: 0px; }
 
 #control_panel { width: 99%; border: 0; }
-#chat_button_code { font-family: "Courier New", Courier, monospace; width: 650px; height: 200px; font-size: 85%; }
 
 #reset_settings {
 	font-size: 85%;
@@ -135,4 +134,8 @@ p.img {
 	/* margin-top: 1px did not work as intended under Chrome */
 	position: relative;
 	top: 1px;
+}
+
+#advanced {
+	margin-bottom: 0;
 }

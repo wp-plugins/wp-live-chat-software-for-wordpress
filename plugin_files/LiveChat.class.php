@@ -1,7 +1,5 @@
 <?php
 
-require_once('LiveChat.widget.php');
-
 class LiveChat
 {
 	// singleton pattern
@@ -31,7 +29,6 @@ class LiveChat
 	protected function __construct()
 	{
 		add_action ('wp_head', array($this, 'tracking_code'));
-		add_action('widgets_init', create_function('', 'return register_widget("LiveChatWidget");'));
 	}
 
 	public static function get_instance()
@@ -58,19 +55,6 @@ class LiveChat
 		}
 
 		return $this->plugin_url;
-	}
-
-	/**
-	 * Returns true if current Wordpress theme supports widgets,
-	 * false otherwise
-	 *
-	 * @return bool
-	 */
-	public function widgets_enabled()
-	{
-		global $wp_registered_sidebars;
-
-		return (bool)(sizeof($wp_registered_sidebars) > 0);
 	}
 
 	public function livechat_sanitize_lang ($lang)

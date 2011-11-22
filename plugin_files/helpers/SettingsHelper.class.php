@@ -16,16 +16,9 @@ class SettingsHelper extends LiveChatHelper
 		</div>
 		<div class="clear"></div> 
 
-		<?php
-		if (isset($_GET['chat_button']))
-		{
-			LiveChat::get_instance()->get_helper('ChatButton');
-		}
-		else
-		{
-			LiveChat::get_instance()->get_helper('ChangesSaved');
-			LiveChat::get_instance()->get_helper('TrackingCodeInfo');
-			LiveChat::get_instance()->get_helper('ChatButtonInfo');
+<?php
+LiveChat::get_instance()->get_helper('ChangesSaved');
+LiveChat::get_instance()->get_helper('TrackingCodeInfo');
 ?>
 		
 		<?php if (LiveChat::get_instance()->is_installed() == false) { ?>
@@ -50,15 +43,14 @@ class SettingsHelper extends LiveChatHelper
 			<h3><?php echo _e('Download application'); ?></h3>
 			<div class="postbox_content">
 			<p><?php echo _e('Download LiveChat for your desktop/mobile and start chatting with your customers!'); ?></p>
-			<p class="btn"><a href="http://www.livechatinc.com/download/" target="_blank"><?php _e('Download application'); ?></a></p>
+			<p class="btn"><a href="http://www.livechatinc.com/product/" target="_blank"><?php _e('Download application'); ?></a></p>
 			</div>
 			</div>
 			<?php endif; ?>
 
+			<?php if (LiveChat::get_instance()->is_installed() == false) { ?>
 			<div class="postbox">
 			<form method="post" action="?page=livechat_settings">
-
-				<?php if (LiveChat::get_instance()->is_installed() == false) { ?>
 				<h3>LiveChat account</h3>
 				<div class="postbox_content">
 				<table class="form-table">
@@ -74,11 +66,14 @@ class SettingsHelper extends LiveChatHelper
 				<input type="hidden" name="settings_form" value="1">
 				<input type="submit" class="button-primary" value="<?php _e('Save changes') ?>" />
 				</p>
-			</div>
+				</div>
 			</form>
+			</div>
 
 				<?php } else { ?>
 
+			<div id="advanced" class="postbox" style="display:none">
+			<form method="post" action="?page=livechat_settings">
 				<h3>Advanced settings</h3>
 				<div class="postbox_content">
 				<table class="form-table">
@@ -97,10 +92,11 @@ class SettingsHelper extends LiveChatHelper
 				<input type="hidden" name="settings_form" value="1">
 				<input type="submit" class="button-primary" value="<?php _e('Save changes') ?>" />
 				</p>
-			</div>
+				</div>
 			</form>
-				<?php } ?>
 			</div>
+			<p id="advanced-link"><a href="">Show advanced settings&hellip;</a></p>
+				<?php } ?>
 
 			<?php if (LiveChat::get_instance()->is_installed()) { ?>
 			<p id="reset_settings">Something went wrong? <a href="?page=livechat_settings&amp;reset=1">Reset your settings</a>.</p>
@@ -158,11 +154,8 @@ class SettingsHelper extends LiveChatHelper
 			</form>
 			</div>
 		</div>
-<?php
-		}
-?>
-		</div>
-		</div>
+	</div>
+	</div>
 <?php
 	}
 }

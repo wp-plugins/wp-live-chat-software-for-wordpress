@@ -140,12 +140,6 @@ final class LiveChatAdmin extends LiveChat
 		$this->get_helper('ControlPanel');
 	}
 
-	public function chat_button_page()
-	{
-		$this->get_helper('ChatButton');
-	}
-
-
 	public function changes_saved()
 	{
 		return $this->changes_saved;

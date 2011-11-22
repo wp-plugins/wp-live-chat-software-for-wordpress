@@ -28,6 +28,10 @@ Take a tour to see why you need LiveChat on your website: http://www.livechatinc
 
 == Changelog ==
 
+= 3.2.0 =
+* Compatibility with new chat window
+* Removed "click-to-chat button" configurator (no longer used)
+
 = 3.1.0 =
 * Major update in the Tracking Code
 
