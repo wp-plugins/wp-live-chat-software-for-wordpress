@@ -121,7 +121,7 @@ final class LiveChatAdmin extends LiveChat
 		}
 
 		// Settings link
-		add_filter('plugin_action_links', array($this, 'livechat_settings_link'));
+		add_filter('plugin_action_links', array($this, 'livechat_settings_link'), 10, 2);
 	}
 
 	/**
@@ -145,8 +145,13 @@ final class LiveChatAdmin extends LiveChat
 		return $this->changes_saved;
 	}
 
-	public function livechat_settings_link($links)
+	public function livechat_settings_link($links, $file)
 	{
+		if (basename($file) !== 'livechat.php')
+		{
+			return $links;
+		}
+
 		$settings_link = sprintf('<a href="admin.php?page=livechat_settings">%s</a>', __('Settings'));
 		array_unshift ($links, $settings_link); 
 		return $links;

@@ -8,7 +8,7 @@ class TrackingCodeInfoHelper extends LiveChatHelper
 	{
 		if (LiveChat::get_instance()->is_installed())
 		{
-			return '<div class="updated installed_ok"><p>Tracking code installed properly.</p></div>';
+			return '<div class="updated installed_ok"><p>LiveChat is installed properly. Woohoo!</p></div>';
 		}
 
 		return '';

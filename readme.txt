@@ -1,7 +1,7 @@
 === LiveChat ===
 Contributors: LiveChat
 Tags: live support, live chat, live chat software, online support, ecommerce, increase sales, customer help, customer support, livechat, live support, customer service, plugin, chat
-Stable tag: 3.2.0
+Stable tag: 3.2.1
 Requires at least: 2.8
 Tested up to: 3.1.3
 
@@ -27,6 +27,10 @@ Take a tour to see why you need LiveChat on your website: http://www.livechatinc
 1. Chat window: A chat with a LiveChat operator.
 
 == Changelog ==
+
+= 3.2.1 =
+* Fixed plugin "Settings" link
+* Changed message after successful installation
 
 = 3.2.0 =
 * Compatibility with new chat window
