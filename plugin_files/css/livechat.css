@@ -71,14 +71,6 @@ hr.livechat { margin-bottom: 1em; height: 1px; border: 0; color: #999; backgroun
 	margin-top: 20px;
 }
 
-a.toggle {
-	padding: 2px 0 3px 20px;
-	background: url(../images/plusminus.png) no-repeat 0 2px;
-}
-a.toggle.unfolded {
-	background-position: 0 -32px;
-}
-
 p.img {
 }
 	p.img img {
