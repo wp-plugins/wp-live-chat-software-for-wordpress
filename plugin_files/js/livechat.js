@@ -5,7 +5,6 @@ var LiveChat =
 	init: function()
 	{
 		this.externalLinks();
-		this.toggleLinks();
 		this.resetLink();
 		this.toggleForms();
 		this.alreadyHaveAccountForm();
@@ -18,21 +17,6 @@ var LiveChat =
 	externalLinks: function()
 	{
 		$('a.help').attr('target', '_blank');
-	},
-
-	toggleLinks: function()
-	{
-		$('a.toggle').toggle(function()
-		{
-			$($(this).attr('href')).slideToggle();
-			$(this).toggleClass('unfolded');
-			return false;
-		},
-		function(){
-			$($(this).attr('href')).slideToggle();
-			$(this).toggleClass('unfolded');
-			return false;
-		});		
 	},
 
 	resetLink: function()
