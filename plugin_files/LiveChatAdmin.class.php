@@ -160,7 +160,6 @@ final class LiveChatAdmin extends LiveChat
 	protected function reset_options()
 	{
 		delete_option('livechat_license_number');
-		delete_option('livechat_lang');
 		delete_option('livechat_groups');
 	}
 
@@ -179,14 +178,7 @@ final class LiveChatAdmin extends LiveChat
 		$skill = max(0, $skill);
 
 
-		$lang = 'en';
-		if (isset($data['lang']) && preg_match('/^[a-z]{2}$/', $data['lang']))
-		{
-			$lang = $data['lang'];
-		}
-
 		update_option('livechat_license_number', $license_number);
-		update_option('livechat_lang', $lang);
 		update_option('livechat_groups', $skill);
 
 		if (isset($data['changes_saved']) && $data['changes_saved'] == '1')

@@ -15,7 +15,6 @@ class LiveChat
 	 */
 	protected $login = null;
 	protected $license_number = null;
-	protected $lang = null;
 	protected $skill = null;
 
 	/**
@@ -55,14 +54,6 @@ class LiveChat
 		}
 
 		return $this->plugin_url;
-	}
-
-	public function livechat_sanitize_lang ($lang)
-	{
-		$lang = trim($lang);
-		if (preg_match('/^[a-z]{2}$/', $lang)) return $lang;
-
-		return 'en';
 	}
 
 	/**
@@ -106,21 +97,6 @@ class LiveChat
 		}
 
 		return $this->login;
-	}
-
-	/**
-	 * Returns LiveChat language code
-	 *
-	 * @return string
-	 */
-	public function get_lang()
-	{
-		if (is_null($this->lang))
-		{
-			$this->lang = get_option('livechat_lang');
-		}
-
-		return $this->lang;
 	}
 
 	/**
