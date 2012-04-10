@@ -78,10 +78,6 @@ LiveChat::get_instance()->get_helper('TrackingCodeInfo');
 				<div class="postbox_content">
 				<table class="form-table">
 				<tr>
-				<th scope="row"><label for="lang">Language:</label></th>
-				<td><input type="text" name="lang" id="lang" value="<?php echo LiveChat::get_instance()->get_lang(); ?>" /> <span class="explanation">Chat window translation. <strong>en</strong> for English (default). <a href="http://support.livechatinc.com/entries/20161073-what-languages-are-supported-in-livechat" class="help">More info&hellip;</a></span></td>
-				</tr>
-				<tr>
 				<th scope="row"><label for="skill">Skill:</label></th>
 				<td><input type="text" name="skill" id="skill" value="<?php echo LiveChat::get_instance()->get_skill(); ?>" /> <span class="explanation">Used for skill-based routing. <strong>0</strong> for default skill (recommended).</span></td>
 				</tr>
@@ -147,7 +143,6 @@ LiveChat::get_instance()->get_helper('TrackingCodeInfo');
 			<form method="post" action="?page=livechat_settings" id="save_new_license">
 				<p>
 				<input type="hidden" name="new_license_form" value="1">
-				<input type="hidden" name="lang" value="en">
 				<input type="hidden" name="skill" value="0">
 				<input type="hidden" name="license_number" value="0" id="new_license_number">
 				</p>
