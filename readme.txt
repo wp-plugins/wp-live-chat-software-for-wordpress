@@ -1,17 +1,17 @@
 === LiveChat ===
 Contributors: LiveChat
 Tags: live support, live chat, live chat software, online support, ecommerce, increase sales, customer help, customer support, livechat, live support, customer service, plugin, chat
-Stable tag: 3.1.0
+Stable tag: 3.2.4
 Requires at least: 2.8
 Tested up to: 3.1.3
 
-This plugin integrates your Wordpress with LiveChat - an application for online customer service and support.
+Live chat software for Wordpress plugin that integrate with LiveChat - an application for online customer service and support.
 
 == Description ==
 
 LiveChat is a fast and intuitive live chat software to enable your sales representatives contact customers on the website. Help online visitors find what they need before they leave your site.
 
-Try LiveChat free for 14 days! Sign up here: https://www.livechatinc.com/signup/
+Try LiveChat free for 30 days! Sign up here: https://www.livechatinc.com/signup/
 
 Take a tour to see why you need LiveChat on your website: http://www.livechatinc.com/tour/
 
@@ -27,6 +27,23 @@ Take a tour to see why you need LiveChat on your website: http://www.livechatinc
 1. Chat window: A chat with a LiveChat operator.
 
 == Changelog ==
+
+= 3.2.4 =
+* Updated url for licence number
+
+= 3.2.3 =
+* Romoved language parameter from Tracking Code
+
+= 3.2.2 =
+* Fixed CSS styles conflicts with other plugins
+
+= 3.2.1 =
+* Fixed plugin "Settings" link
+* Changed message after successful installation
+
+= 3.2.0 =
+* Compatibility with new chat window
+* Removed "click-to-chat button" configurator (no longer used)
 
 = 3.1.0 =
 * Major update in the Tracking Code

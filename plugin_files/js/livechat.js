@@ -5,33 +5,18 @@ var LiveChat =
 	init: function()
 	{
 		this.externalLinks();
-		this.toggleLinks();
 		this.resetLink();
 		this.toggleForms();
 		this.alreadyHaveAccountForm();
 		this.newLicenseForm();
 		this.controlPanelIframe();
 		this.fadeChangesSaved();
+		this.showAdvancedSettings();
 	},
 
 	externalLinks: function()
 	{
 		$('a.help').attr('target', '_blank');
-	},
-
-	toggleLinks: function()
-	{
-		$('a.toggle').toggle(function()
-		{
-			$($(this).attr('href')).slideToggle();
-			$(this).toggleClass('unfolded');
-			return false;
-		},
-		function(){
-			$($(this).attr('href')).slideToggle();
-			$(this).toggleClass('unfolded');
-			return false;
-		});		
 	},
 
 	resetLink: function()
@@ -88,7 +73,7 @@ var LiveChat =
 
 				$('#livechat_already_have .ajax_message').removeClass('message').addClass('wait').html('Please wait&hellip;');
 
-				$.getJSON('https://api.livechatinc.com/license/number/'+login+'?callback=?', function(response)
+				$.getJSON('https://api.livechatinc.com/licence/operator/'+login+'?callback=?', function(response)
 				{
 					if (response.error)
 					{
@@ -253,6 +238,25 @@ var LiveChat =
 				$cs.slideUp();
 			}, 1000);
 		}
+	},
+
+	showAdvancedSettings: function()
+	{
+		$('#advanced-link a').click(function()
+		{
+			if ($('#advanced').is(':visible'))
+			{
+				$(this).html('Show advanced settings&hellip;');
+				$('#advanced').slideUp();
+			}
+			else
+			{
+				$(this).html('Hide advanced settings&hellip;');
+				$('#advanced').slideDown();
+			}
+
+			return false;
+		})
 	}
 };
 
