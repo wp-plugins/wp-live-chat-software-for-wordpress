@@ -73,7 +73,7 @@ var LiveChat =
 
 				$('#livechat_already_have .ajax_message').removeClass('message').addClass('wait').html('Please wait&hellip;');
 
-				$.getJSON('https://api.livechatinc.com/license/number/'+login+'?callback=?', function(response)
+				$.getJSON('https://api.livechatinc.com/licence/operator/'+login+'?callback=?', function(response)
 				{
 					if (response.error)
 					{
