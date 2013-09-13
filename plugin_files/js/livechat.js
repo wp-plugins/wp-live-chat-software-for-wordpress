@@ -36,7 +36,7 @@ var LiveChat =
 			{
 				$('#livechat_new_account').hide();
 				$('#livechat_already_have').show();
-				$('#login').focus();
+				$('#livechat_login').focus();
 			}
 			else if ($('#choice_account_0').is(':checked'))
 			{
@@ -64,10 +64,10 @@ var LiveChat =
 		{
 			if (parseInt($('#license_number').val()) == 0)
 			{
-				var login = $.trim($('#login').val());
+				var login = $.trim($('#livechat_login').val());
 				if (!login.length)
 				{
-					$('#login').focus();
+					$('#livechat_login').focus();
 					return false;
 				}
 
@@ -78,7 +78,7 @@ var LiveChat =
 					if (response.error)
 					{
 						$('#livechat_already_have .ajax_message').removeClass('wait').addClass('message').html('Incorrect LiveChat login.');
-						$('#login').focus();
+						$('#livechat_login').focus();
 						return false;
 					}
 					else

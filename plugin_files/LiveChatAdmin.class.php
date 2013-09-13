@@ -24,9 +24,7 @@ final class LiveChatAdmin extends LiveChat
 	{
 		parent::__construct();
 
-		wp_enqueue_script('livechat', $this->get_plugin_url().'/js/livechat.js', 'jquery', $this->get_plugin_version(), true);
-		wp_enqueue_style('livechat', $this->get_plugin_url().'/css/livechat.css', false, $this->get_plugin_version());
-
+		add_action('init', array($this, 'load_scripts'));
 		add_action('admin_menu', array($this, 'admin_menu'));
 
 		// tricky error reporting
@@ -85,6 +83,12 @@ final class LiveChatAdmin extends LiveChat
 		return $this->plugin_version;
 	}
 
+	public function load_scripts()
+	{
+		wp_enqueue_script('livechat', $this->get_plugin_url().'/js/livechat.js', 'jquery', $this->get_plugin_version(), true);
+		wp_enqueue_style('livechat', $this->get_plugin_url().'/css/livechat.css', false, $this->get_plugin_version());
+	}
+
 	public function admin_menu()
 	{
 		add_menu_page(
@@ -105,15 +109,6 @@ final class LiveChatAdmin extends LiveChat
 			array($this, 'livechat_settings_page')
 		);
 
-		add_submenu_page(
-			'livechat',
-			'Control panel',
-			'Control panel',
-			'administrator',
-			'livechat_control_panel',
-			array($this, 'control_panel_page')
-		);
-
 		// remove the submenu that is automatically added
 		if (function_exists('remove_submenu_page'))
 		{
@@ -130,14 +125,6 @@ final class LiveChatAdmin extends LiveChat
 	public function livechat_settings_page()
 	{
 		$this->get_helper('Settings');
-	}
-
-	/**
-	 * Displays control panel page
-	 */
-	public function control_panel_page()
-	{
-		$this->get_helper('ControlPanel');
 	}
 
 	public function changes_saved()

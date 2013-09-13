@@ -15,7 +15,7 @@ class TrackingCodeHelper extends LiveChatHelper
 <script type="text/javascript">
   var __lc = {};
   __lc.license = {$license_number};
-  __lc.skill = {$skill};
+  __lc.group = {$skill};
 
   (function() {
     var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
