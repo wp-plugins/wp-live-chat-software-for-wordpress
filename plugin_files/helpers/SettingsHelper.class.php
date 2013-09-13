@@ -40,10 +40,10 @@ LiveChat::get_instance()->get_helper('TrackingCodeInfo');
 
 			<?php if (LiveChat::get_instance()->is_installed()): ?>
 			<div class="postbox">
-			<h3><?php echo _e('Download application'); ?></h3>
+			<h3><?php echo _e('Sign in to LiveChat'); ?></h3>
 			<div class="postbox_content">
-			<p><?php echo _e('Download LiveChat for your desktop/mobile and start chatting with your customers!'); ?></p>
-			<p class="btn"><a href="http://www.livechatinc.com/product/" target="_blank"><?php _e('Download application'); ?></a></p>
+			<p><?php echo _e('Sign in to LiveChat and start chatting with your customers!'); ?></p>
+			<p><span class="btn"><a href="https://my.livechatinc.com/" target="_blank"><?php _e('Sign in to web application'); ?></a></span> &nbsp; or <a href="http://www.livechatinc.com/product/" target="_blank"><?php _e('download desktop app'); ?></a></p>
 			</div>
 			</div>
 			<?php endif; ?>
@@ -55,8 +55,8 @@ LiveChat::get_instance()->get_helper('TrackingCodeInfo');
 				<div class="postbox_content">
 				<table class="form-table">
 				<tr>
-				<th scope="row"><label for="login">My LiveChat login is:</label></th>
-				<td><input type="text" name="login" id="login" value="<?php echo LiveChat::get_instance()->get_login(); ?>" size="40" /></td>
+				<th scope="row"><label for="livechat_login">My LiveChat login is:</label></th>
+				<td><input type="text" name="login" id="livechat_login" value="<?php echo LiveChat::get_instance()->get_login(); ?>" size="40" /></td>
 				</tr>
 				</table>
 
@@ -78,8 +78,8 @@ LiveChat::get_instance()->get_helper('TrackingCodeInfo');
 				<div class="postbox_content">
 				<table class="form-table">
 				<tr>
-				<th scope="row"><label for="skill">Skill:</label></th>
-				<td><input type="text" name="skill" id="skill" value="<?php echo LiveChat::get_instance()->get_skill(); ?>" /> <span class="explanation">Used for skill-based routing. <strong>0</strong> for default skill (recommended).</span></td>
+				<th scope="row"><label for="skill">Group:</label></th>
+				<td><input type="text" name="skill" id="skill" value="<?php echo LiveChat::get_instance()->get_skill(); ?>" /> <span class="explanation">Used for dividing chat agents into groups (<a href="http://www.livechatinc.com/kb/dividing-live-chat-by-group/" target="_blank">read more</a>). Enter <strong>0</strong> for default group (recommended).</span></td>
 				</tr>
 				</table>
 				<p class="submit">
