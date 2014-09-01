@@ -13,7 +13,7 @@ LiveChat is a fast and intuitive live chat software to let your website visitors
 
 Try LiveChat free for 30 days! Sign up here: https://www.livechatinc.com/signup/
 
-Take a tour to see why you need LiveChat on your website: http://www.livechatinc.com/tour/
+Take a tour to see why you need LiveChat on your website: http://www.livechatinc.com/why-livechat/
 
 == Installation ==
 
