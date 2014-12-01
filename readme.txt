@@ -3,7 +3,7 @@ Contributors: LiveChat
 Tags: live support, live chat, live chat software, online support, ecommerce, increase sales, customer help, customer support, livechat, live support, customer service, plugin, chat
 Stable tag: 3.2.7
 Requires at least: 2.8
-Tested up to: 3.6.1
+Tested up to: 4.0.1
 
 Live chat software for Wordpress plugin that integrate with LiveChat - an application for online customer service and support.
 
@@ -29,6 +29,9 @@ Take a tour to see why you need LiveChat on your website: http://www.livechatinc
 
 
 == Changelog ==
+
+= 3.2.8 =
+* Plugin fully supports the newest version of Wordpress.
 
 = 3.2.7 =
 * Plugin compatible with the newest LiveChat version
