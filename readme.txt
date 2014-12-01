@@ -1,7 +1,7 @@
 === LiveChat ===
 Contributors: LiveChat
 Tags: live support, live chat, live chat software, online support, ecommerce, increase sales, customer help, customer support, livechat, live support, customer service, plugin, chat
-Stable tag: 3.2.7
+Stable tag: 3.2.8
 Requires at least: 2.8
 Tested up to: 4.0.1
 
