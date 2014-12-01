@@ -72,22 +72,30 @@ var LiveChat =
 				}
 
 				$('#livechat_already_have .ajax_message').removeClass('message').addClass('wait').html('Please wait&hellip;');
-
-				$.getJSON('https://api.livechatinc.com/licence/operator/'+login+'?callback=?', function(response)
-				{
-					if (response.error)
-					{
-						$('#livechat_already_have .ajax_message').removeClass('wait').addClass('message').html('Incorrect LiveChat login.');
+				
+				$.ajax({
+					url: 'https://api.livechatinc.com/licence/operator/'+login+'?callback=?',
+					type: "GET",
+					dataType: 'jsonp',
+					cache: false,
+					success: function (data, status, error) {
+						if (data.error)
+						{
+							$('#livechat_already_have .ajax_message').removeClass('wait').addClass('message').html('Incorrect LiveChat login.');
+							$('#livechat_login').focus();
+							return false;
+						}
+						else
+						{
+							$('#license_number').val(data.number);
+							$('#livechat_already_have form').submit();
+						}
+					},
+					error: function (data, status, error) {
+						$('#livechat_already_have .ajax_message').removeClass('wait').addClass('message').html('Try again.');
 						$('#livechat_login').focus();
-						return false;
-					}
-					else
-					{
-						$('#license_number').val(response.number);
-						$('#livechat_already_have form').submit();
 					}
 				});
-
 				return false;
 			}
 		});		
