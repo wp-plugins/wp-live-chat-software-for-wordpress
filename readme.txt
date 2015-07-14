@@ -1,23 +1,25 @@
 === LiveChat - WP live chat software for Wordpress ===
 Contributors: LiveChat
-Tags: live support, live chat, live chat software, help desk, help desk software, online ticketing system, ticketing system, online support, ecommerce chat, sales, customer help, customer support, livechat, live support, customer service software, chat plugin, chat, customer service chat
-Stable tag: 3.2.9
+Tags: live support, live chat, live chat software, help desk, help desk software, online ticketing system, ticketing system, online support, ecommerce chat, sales, customer help, customer support, livechat, live support, customer service software, chat plugin, chat, customer service chat, live chat button, live chat plugin, live chat support, live chat tool, live chat widget, live support, live support button, live chat solution
+
+Stable tag: 3.2.10
 Requires at least: 2.8
 Tested up to: 4.2.2
 
-Live chat and help desk software for Wordpress plugin that integrate with LiveChat - an application for online customer service and support.
+Live chat and help desk software plugin for Wordpress. Add LiveChat (live chat and help desk software) to your Wordpress. 
 
 == Description ==
 
-LiveChat is a fast and intuitive live chat software and help desk software that allows website visitors to contact you in real-time. Help online visitors find what they need before they leave your site.
+LiveChat - live chat software and help desk software for customer service. Live chat allows website visitors to contact you in real-time. Help desk software is used to  online visitors find what they need before they leave your site.
 
-Try LiveChat free for 30 days! Sign up here: https://www.livechatinc.com/signup/
+Try LiveChat free for 30 days! Sign up for our live chat here: https://www.livechatinc.com/signup/
 
-Take a tour to see why you need LiveChat on your website: http://www.livechatinc.com/why-livechat/
+Take a tour to see why you need live chat software on your website: http://www.livechatinc.com/why-livechat/
 
-***
+——-
 
 Product requires active LiveChat subscription after 30 days of free trial.
+
 
 == Installation ==
 
@@ -28,11 +30,20 @@ Product requires active LiveChat subscription after 30 days of free trial.
 
 == Screenshots ==
 
-1. Chat window: A chat with a LiveChat operator.
-2. Online Visitors: see who's browsing your website in real-time.
+1. LiveChat Applications are available for web browser, Windows Mac and iPhone, iPad and Android devices.
+2. LiveChat is designed specifically for real-time customer service using chats and help desk tickets.
+3. Visitors list and client details display valuable information useful during chats with customers.
+4. Dashboard - a real-time glimpse of your customer service to display on a big screen.
+5. Chat window can be customized. Social media icons can be added for social engagement.
+6. LiveChat offers plenty of reports and customer service analytics.
+7. Additional information from pre-chat and post-chat surveys serves as extra knowledge about customers.
+8. Help desk software in LiveChat allows collecting tickets from chats, emails and ticket forms.
 
 
 == Changelog ==
+
+= 3.2.10 =
+* Updated readme.txt file, updated screenshots
 
 = 3.2.9 =
 * Updated readme.txt file, checked compatibility to Wordpress 4.2.2
