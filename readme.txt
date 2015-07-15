@@ -42,6 +42,9 @@ Product requires active LiveChat subscription after 30 days of free trial.
 
 == Changelog ==
 
+= 3.2.11 =
+* Moved screenshots to assets directory
+
 = 3.2.10 =
 * Updated readme.txt file, updated screenshots
 
