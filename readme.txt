@@ -2,7 +2,7 @@
 Contributors: LiveChat
 Tags: live support, live chat, live chat software, help desk, help desk software, online ticketing system, ticketing system, online support, ecommerce chat, sales, customer help, customer support, livechat, live support, customer service software, chat plugin, chat, customer service chat, live chat button, live chat plugin, live chat support, live chat tool, live chat widget, live support, live support button, live chat solution
 
-Stable tag: 3.2.11
+Stable tag: 3.2.12
 Requires at least: 2.8
 Tested up to: 4.3
 
