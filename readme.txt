@@ -4,7 +4,7 @@ Tags: live support, live chat, live chat software, help desk, help desk software
 
 Stable tag: 3.2.11
 Requires at least: 2.8
-Tested up to: 4.2.2
+Tested up to: 4.3
 
 Live chat and help desk software plugin for Wordpress. Add LiveChat (live chat and help desk software) to your Wordpress. 
 
@@ -41,6 +41,9 @@ Product requires active LiveChat subscription after 30 days of free trial.
 
 
 == Changelog ==
+
+= 3.2.12 =
+* Updated readme.txt file, checked compatibility to Wordpress 4.3
 
 = 3.2.11 =
 * Moved screenshots to assets directory
